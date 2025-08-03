@@ -25,3 +25,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local development files
+.DS_Store
+.vscode/
+*.log
+*.tmp
+*.sublime-project
+*.sublime-workspace
+
+# Next.js specific cache
+.next/cache/
