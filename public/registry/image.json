@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "image",
+  "type": "registry:ui",
+  "description": "An enhanced image component with hover effects and aspect ratio control.",
+  "dependencies": ["framer-motion"],
+  "files": [
+    {
+      "name": "image.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { motion } from \"framer-motion\"\nimport { cn } from \"@/lib/utils\"\n\ninterface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  hoverEffect?: \"zoom\" | \"focus\" | \"lift\" | \"none\"\n  aspectRatio?: \"square\" | \"video\" | \"portrait\" | \"auto\"\n}\n\nconst Image = React.forwardRef<HTMLImageElement, ImageProps>(\n  ({ className, hoverEffect = \"focus\", aspectRatio = \"auto\", alt, ...props }, ref) => {\n    const aspectRatioClasses = {\n      square: \"aspect-square\",\n      video: \"aspect-video\",\n      portrait: \"aspect-[3/4]\",\n      auto: \"\",\n    }\n\n    const hoverVariants = {\n      zoom: {\n        scale: 1.05,\n        transition: { duration: 0.3, ease: \"easeOut\" },\n      },\n      focus: {\n        scale: 1.02,\n        filter: \"brightness(1.1) contrast(1.1)\",\n        transition: { duration: 0.3, ease: \"easeOut\" },\n      },\n      lift: {\n        y: -8,\n        scale: 1.02,\n        boxShadow: \"0 20px 40px rgba(0,0,0,0.1)\",\n        transition: { duration: 0.3, ease: \"easeOut\" },\n      },\n      none: {},\n    }\n\n    return (\n      <motion.div\n        className={cn(\n          \"overflow-hidden rounded-lg\",\n          aspectRatioClasses[aspectRatio],\n          className\n        )}\n        whileHover={hoverEffect !== \"none\" ? hoverVariants[hoverEffect] : undefined}\n        initial={{ opacity: 0, scale: 0.95 }}\n        animate={{ opacity: 1, scale: 1 }}\n        transition={{ duration: 0.3 }}\n      >\n        <img\n          ref={ref}\n          alt={alt}\n          className=\"h-full w-full object-cover\"\n          {...props}\n        />\n      </motion.div>\n    )\n  }\n)\nImage.displayName = \"Image\"\n\nexport { Image, type ImageProps }"
+    }
+  ]
+}

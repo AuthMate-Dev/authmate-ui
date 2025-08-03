@@ -1,0 +1,40 @@
+{
+  "name": "carousel",
+  "type": "components:ui",
+  "dependencies": ["framer-motion", "lucide-react"],
+  "devDependencies": [],
+  "registryDependencies": ["button"],
+  "files": [
+    {
+      "name": "carousel.tsx",
+      "content": "// Carousel component implementation"
+    }
+  ],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {
+          "animation": {
+            "slide-left": "slideLeft 0.3s ease-in-out",
+            "slide-right": "slideRight 0.3s ease-in-out",
+            "fade-in": "fadeIn 0.3s ease-in-out"
+          },
+          "keyframes": {
+            "slideLeft": {
+              "0%": { "transform": "translateX(100%)" },
+              "100%": { "transform": "translateX(0)" }
+            },
+            "slideRight": {
+              "0%": { "transform": "translateX(-100%)" },
+              "100%": { "transform": "translateX(0)" }
+            },
+            "fadeIn": {
+              "0%": { "opacity": "0" },
+              "100%": { "opacity": "1" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

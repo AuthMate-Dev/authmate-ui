@@ -1,0 +1,24 @@
+{
+  "name": "compare",
+  "type": "components:ui",
+  "dependencies": ["framer-motion", "lucide-react"],
+  "files": [
+    {
+      "name": "compare.tsx",
+      "content": "// Component code would be here in a real implementation"
+    }
+  ],
+  "tailwind": {
+    "config": {
+      "content": ["./components/**/*.{js,ts,jsx,tsx}"],
+      "theme": {
+        "extend": {
+          "cursor": {
+            "ew-resize": "ew-resize",
+            "ns-resize": "ns-resize"
+          }
+        }
+      }
+    }
+  }
+}

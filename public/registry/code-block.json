@@ -1,0 +1,16 @@
+{
+  "name": "code-block",
+  "type": "components:ui",
+  "dependencies": ["react-syntax-highlighter", "@types/react-syntax-highlighter", "lucide-react", "framer-motion"],
+  "files": [
+    {
+      "name": "code-block.tsx",
+      "content": "// Component code would be here in a real implementation"
+    }
+  ],
+  "tailwind": {
+    "config": {
+      "content": ["./components/**/*.{js,ts,jsx,tsx}"]
+    }
+  }
+}
