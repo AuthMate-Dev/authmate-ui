@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "responsive-layout",
     "type":  "registry:ui",
     "dependencies":  [
@@ -11,9 +11,9 @@
                              ],
     "files":  [
                   {
-                      "name":  "responsive-layout.tsx",
                       "content":  "// Component content would be here in a real registry",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "responsive-layout.tsx"
                   }
               ]
 }

@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "compare",
     "type":  "registry:ui",
     "dependencies":  [
@@ -7,9 +7,9 @@
                      ],
     "files":  [
                   {
-                      "name":  "compare.tsx",
                       "content":  "// Component code would be here in a real implementation",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "compare.tsx"
                   }
               ],
     "tailwind":  {

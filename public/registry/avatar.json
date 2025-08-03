@@ -1,4 +1,4 @@
-{
+﻿{
     "$schema":  "https://ui.shadcn.com/schema/registry-item.json",
     "name":  "avatar",
     "type":  "registry:ui",
@@ -10,9 +10,9 @@
                      ],
     "files":  [
                   {
-                      "name":  "avatar.tsx",
                       "content":  "import * as React from \"react\"\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Avatar = React.forwardRef\u003c\n  React.ElementRef\u003ctypeof AvatarPrimitive.Root\u003e,\n  React.ComponentPropsWithoutRef\u003ctypeof AvatarPrimitive.Root\u003e\n\u003e(({ className, ...props }, ref) =\u003e (\n  \u003cAvatarPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full\",\n      className\n    )}\n    {...props}\n  /\u003e\n))\nAvatar.displayName = AvatarPrimitive.Root.displayName\n\nconst AvatarImage = React.forwardRef\u003c\n  React.ElementRef\u003ctypeof AvatarPrimitive.Image\u003e,\n  React.ComponentPropsWithoutRef\u003ctypeof AvatarPrimitive.Image\u003e\n\u003e(({ className, ...props }, ref) =\u003e (\n  \u003cAvatarPrimitive.Image\n    ref={ref}\n    className={cn(\"aspect-square h-full w-full\", className)}\n    {...props}\n  /\u003e\n))\nAvatarImage.displayName = AvatarPrimitive.Image.displayName\n\nconst AvatarFallback = React.forwardRef\u003c\n  React.ElementRef\u003ctypeof AvatarPrimitive.Fallback\u003e,\n  React.ComponentPropsWithoutRef\u003ctypeof AvatarPrimitive.Fallback\u003e\n\u003e(({ className, ...props }, ref) =\u003e (\n  \u003cAvatarPrimitive.Fallback\n    ref={ref}\n    className={cn(\n      \"flex h-full w-full items-center justify-center rounded-full bg-muted\",\n      className\n    )}\n    {...props}\n  /\u003e\n))\nAvatarFallback.displayName = AvatarPrimitive.Fallback.displayName\n\nexport { Avatar, AvatarImage, AvatarFallback }",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "avatar.tsx"
                   }
               ]
 }

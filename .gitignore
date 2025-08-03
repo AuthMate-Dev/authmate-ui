@@ -36,3 +36,5 @@ next-env.d.ts
 
 # Next.js specific cache
 .next/cache/
+
+fix-registry.ps1

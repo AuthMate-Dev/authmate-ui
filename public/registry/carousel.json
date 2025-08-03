@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "carousel",
     "type":  "registry:ui",
     "dependencies":  [
@@ -13,9 +13,9 @@
                              ],
     "files":  [
                   {
-                      "name":  "carousel.tsx",
                       "content":  "// Carousel component implementation",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "carousel.tsx"
                   }
               ],
     "tailwind":  {

@@ -1,4 +1,4 @@
-{
+﻿{
     "$schema":  "https://ui.shadcn.com/schema/registry-item.json",
     "name":  "toast",
     "type":  "registry:ui",
@@ -10,9 +10,9 @@
                      ],
     "files":  [
                   {
-                      "name":  "toast.tsx",
                       "content":  "\"use client\"\n\nimport * as React from \"react\"\nimport * as ToastPrimitives from \"@radix-ui/react-toast\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { X } from \"lucide-react\"\nimport { motion, AnimatePresence } from \"framer-motion\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst ToastProvider = ToastPrimitives.Provider\n\nconst ToastViewport = React.forwardRef\u003c\n  React.ElementRef\u003ctypeof ToastPrimitives.Viewport\u003e,\n  React.ComponentPropsWithoutRef\u003ctypeof ToastPrimitives.Viewport\u003e\n\u003e(({ className, ...props }, ref) =\u003e (\n  \u003cToastPrimitives.Viewport\n    ref={ref}\n    className={cn(\n      \"fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]\",\n      className\n    )}\n    {...props}\n  /\u003e\n))\nToastViewport.displayName = ToastPrimitives.Viewport.displayName\n\nconst toastVariants = cva(\n  \"group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full\",\n  {\n    variants: {\n      variant: {\n        default: \"border bg-background text-foreground\",\n        destructive:\n          \"destructive border-destructive bg-destructive text-destructive-foreground\",\n        success: \"border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)\n\nconst Toast = React.forwardRef\u003c\n  React.ElementRef\u003ctypeof ToastPrimitives.Root\u003e,\n  React.ComponentPropsWithoutRef\u003ctypeof ToastPrimitives.Root\u003e \u0026\n    VariantProps\u003ctypeof toastVariants\u003e\n\u003e(({ className, variant, ...props }, ref) =\u003e {\n  return (\n    \u003cToastPrimitives.Root\n      ref={ref}\n      className={cn(toastVariants({ variant }), className)}\n      {...props}\n    /\u003e\n  )\n})\nToast.displayName = ToastPrimitives.Root.displayName\n\nexport {\n  type ToastProps,\n  type ToastActionElement,\n  ToastProvider,\n  ToastViewport,\n  Toast,\n  ToastTitle,\n  ToastDescription,\n  ToastClose,\n  ToastAction,\n}",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "toast.tsx"
                   }
               ]
 }

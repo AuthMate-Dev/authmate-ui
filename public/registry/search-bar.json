@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "search-bar",
     "type":  "registry:ui",
     "dependencies":  [
@@ -15,9 +15,9 @@
                              ],
     "files":  [
                   {
-                      "name":  "search-bar.tsx",
                       "content":  "// SearchBar component implementation",
-                      "type":  "registry:ui"
+                      "type":  "registry:ui",
+                      "path":  "search-bar.tsx"
                   }
               ],
     "tailwind":  {
