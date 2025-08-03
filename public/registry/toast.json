@@ -6,7 +6,8 @@
     "dependencies":  [
                          "@radix-ui/react-toast",
                          "framer-motion",
-                         "class-variance-authority"
+                         "class-variance-authority",
+                         "lucide-react"
                      ],
     "files":  [
                   {
