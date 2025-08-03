@@ -1,12 +1,19 @@
 {
-  "name": "responsive-layout",
-  "type": "components:ui",
-  "dependencies": ["framer-motion"],
-  "registryDependencies": ["button", "avatar", "badge"],
-  "files": [
-    {
-      "name": "responsive-layout.tsx",
-      "content": "// Component content would be here in a real registry"
-    }
-  ]
+    "name":  "responsive-layout",
+    "type":  "registry:ui",
+    "dependencies":  [
+                         "framer-motion"
+                     ],
+    "registryDependencies":  [
+                                 "button",
+                                 "avatar",
+                                 "badge"
+                             ],
+    "files":  [
+                  {
+                      "name":  "responsive-layout.tsx",
+                      "content":  "// Component content would be here in a real registry",
+                      "type":  "registry:ui"
+                  }
+              ]
 }

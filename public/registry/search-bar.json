@@ -1,27 +1,37 @@
 {
-  "name": "search-bar",
-  "type": "components:ui",
-  "dependencies": ["framer-motion", "lucide-react"],
-  "devDependencies": [],
-  "registryDependencies": ["input", "button", "badge"],
-  "files": [
-    {
-      "name": "search-bar.tsx",
-      "content": "// SearchBar component implementation"
-    }
-  ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "animation": {
-            "search-pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
-          },
-          "backdropBlur": {
-            "xs": "2px"
-          }
-        }
-      }
-    }
-  }
+    "name":  "search-bar",
+    "type":  "registry:ui",
+    "dependencies":  [
+                         "framer-motion",
+                         "lucide-react"
+                     ],
+    "devDependencies":  [
+
+                        ],
+    "registryDependencies":  [
+                                 "input",
+                                 "button",
+                                 "badge"
+                             ],
+    "files":  [
+                  {
+                      "name":  "search-bar.tsx",
+                      "content":  "// SearchBar component implementation",
+                      "type":  "registry:ui"
+                  }
+              ],
+    "tailwind":  {
+                     "config":  {
+                                    "theme":  {
+                                                  "extend":  {
+                                                                 "animation":  {
+                                                                                   "search-pulse":  "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                                                                               },
+                                                                 "backdropBlur":  {
+                                                                                      "xs":  "2px"
+                                                                                  }
+                                                             }
+                                              }
+                                }
+                 }
 }
